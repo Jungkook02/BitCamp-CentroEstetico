@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UtenteRegistrazione</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+    
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+    }
+    
+    .animated-background{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') repeat;
+      animation: slide 10s linear infinite; /* Durata, tipo di animazione, ripetizione */
+    }
+    
+    @keyframes slide {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+    
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(128, 128, 128, 0.623);
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                font-family: 'Libre Baskerville', serif;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            #logo {
+                width: 80px;
+                height: auto;
+            }
+    
+            .navbar-brand {
+                font-family: 'Libre Baskerville', serif;
+            }
+    
+            .navbar.bg-body-tertiary.fixed-top {
+                background-color: rgb(255, 255, 255) !important;
+            }
+    
+            #offcanvasNavbarLabel {
+                font-family: 'Libre Baskerville', serif;
+            }
+        </style>
+</head>
+
+
+<body class="animated-background">
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="immagini/logo.webp" alt="logo" id="logo">
+                <span><a class="navbar-brand" href="index.html">Fast Beauty</a></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Fast Beauty</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="loginAmministratore.html">Login
+                                    Amministratore</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="utente">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Area Utente
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="loginUtente.html">Login Utente</a></li>
+                                      <li><a class="dropdown-item" href="registraUtente.html">Registrati!</a></li>
+                                    </ul>
+                                  </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <form action="" method="post">
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 style="margin-top: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
+                            class="heading-section">Prenotazione Appuntamenti</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 col-lg-5">
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-user-o"></span>
+                            </div>
+                            <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
+                                class="text-center mb-4">Prenota!</h3>
+                                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;"> 
+                                    <img width="48" height="48" src="https://img.icons8.com/color/48/authentication.png" alt="authentication"/>
+                                </div>
+                            <form method="post" action="#" class="login-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control rounded-left" placeholder="Nome" required>
+                                </div>
+                                <br>
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control rounded-left" placeholder="Cognome"
+                                        required>
+                                </div>
+                                <div style="margin-top: 25px;" class="form-group d-flex">
+                                    <input type="email" class="form-control rounded-left" placeholder="Email"
+                                        required>
+                                </div>
+                                <div style="margin-top: 25px;" class="form-group d-flex">
+                                    <input type="password" class="form-control rounded-left" placeholder="Password"
+                                        required>
+                                </div>
+                                <div style="margin-top: 25px;" class="form-group d-flex">
+                                    <input type="date" class="form-control rounded-left" placeholder="Password"
+                                        required>
+                                </div>
+                                <div style="margin-top: 25px;" class="form-group d-flex">
+                                    <input type="time" class="form-control rounded-left" placeholder="Password"
+                                        required>
+                                </div>
+                                <select style="margin-top: 25px;" class="form-select" aria-label="Default select example">
+                                    <option selected>Tipo di Trattamento</option>
+                                    <option value="1">Trattamento Viso</option>
+                                    <option value="2">Manicure</option>
+                                    <option value="3">Massaggio</option>
+                                  </select>
+                                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px;">
+                                    <a href="#"><button type="button" class="btn btn-outline-warning">Invia</button></a>
+                                </div>
+                                <br>
+                            </form>
+
+                            <div class="me-5 ">
+                                <span></span>
+                            </div>
+                            <!-- Left -->
+                        
+                            <!-- Right -->
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                        
+                            </div>
+                            <!-- Right -->
+                            </section>
+                            <!-- Section: Social media -->
+                        
+                            <!-- Section: Links  -->
+                            <section class="">
+                                <div class="container text-center text-md-start mt-5">
+                                    <!-- Grid row -->
+                                    <div class="row mt-3">
+                                        <!-- Grid column -->
+                                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                            <!-- Content -->
+                                            <h6 class="text-uppercase fw-bold" style="color: #ac9724;">Company name</h6>
+                                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                                style="width: 60px; background-color: white; height: 2px" />
+                                            <p id="Azienda" style="color: white;">
+                                                Centro Estetico BITCAMP, il miglior confort dove potrai rilassarti e godere dei migliori servizi in zona Napoli.
+                                            </p>
+                                        </div>
+                                        <!-- Grid column -->
+                        
+                                        <!-- Grid column -->
+                                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                            <!-- Links -->
+                                            <h6 class="text-uppercase fw-bold" style="color: #ac9724;">Prodotti</h6>
+                                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                                style="width: 60px; background-color: white; color: #5299A9; height: 2px" />
+                                            <p>
+                                                <a href="http://localhost:8080/BigliettiVendutiPerPrezzo.html" class="text-white">Vendite Per
+                                                    Prodotto</a>
+                                            </p>
+                                            <p>
+                                                <a href="http://localhost:8080/BigliettiVendutiPerDestinazione.html" class="text-white">Vendite
+                                                    Per Stanza</a>
+                                            </p>
+                                            <p>
+                                                <a href="http://localhost:8080/BigliettiVendutiPerData.html" class="text-white">Vendite Per
+                                                    Data</a>
+                                            </p>
+                                            <p>
+                                                <a href="#!" class="text-white">Prenotazione</a>
+                                            </p>
+                                        </div>
+                                        <!-- Grid column -->
+                        
+                                        <!-- Grid column -->
+                                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                            <!-- Links -->
+                                            <h6 class="text-uppercase fw-bold" style="color: #ac9724;">Link Utili</h6>
+                                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                                style="width: 60px; background-color: white; height: 2px" />
+                                            <p>
+                                                <a href="#!" class="text-white">Il Mio Account</a>
+                                            </p>
+                                            <p>
+                                                <a href="#!" class="text-white">Collaborazioni</a>
+                                            </p>
+                                            <p>
+                                                <a href="#!" class="text-white">Il Mio Carrello</a>
+                                            </p>
+                                            <p>
+                                                <a href="#!" class="text-white">Aiuto</a>
+                                            </p>
+                                        </div>
+                                        <!-- Grid column -->
+                        
+                                        <!-- Grid column -->
+                                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                            <!-- Links -->
+                                            <h6 class="text-uppercase fw-bold" style="color: #ac9724;">Contatti</h6>
+                                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                                style="width: 60px; background-color: white; height: 2px" />
+                                            <p style="color: white;"><i class="fas fa-home mr-3"></i> Napoli, NA 10012, IT</p>
+                                            <p style="color: white;"><i class="fas fa-envelope mr-3"></i> info@CentroBITCAMP.it</p>
+                                            <p style="color: white;"><i class="fas fa-phone mr-3"></i>01 234 567 88</p>
+                                            <p style="color: white;"><i class="fas fa-print mr-3"></i>01 234 567 89</p>
+                                        </div>
+                                        <!-- Grid column -->
+                                    </div>
+                                    <!-- Grid row -->
+                                </div>
+                            </section>
+                            <!-- Section: Links  -->
+                        
+                            <!-- Copyright -->
+                            <div class="text-center p-3" style=" color: white; background-color: rgba(0, 0, 0, 0.2) "> © 2023 Copyright:
+                                <a class="text-white" href="https://github.com/Jungkook02">BITCAMP</a>
+                            </div>
+                            <!-- Copyright -->
+                            </footer>
+                        
+
+</body>
+
+</html>
